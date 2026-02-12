@@ -17,3 +17,4 @@ This project is designed for developers, students, and learners who want to unde
 ✅ Lightweight and high performance  
 
 This project follows best development practices with efficient database handling, optimized image processing, and clean architecture, making it ideal for learning and production use.
+# [View Screenshot]https://girfahelp.blogspot.com/2026/02/complete-blog-system-in-codeigniter-450.html
