@@ -1,0 +1,64 @@
+ERROR - 2026-01-23 06:55:04 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\wwwc\tmp\blog\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\tmp\blog\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'rekhadiet', 3306, '', 0)
+#1 C:\xampp\htdocs\wwwc\tmp\blog\system\Database\BaseConnection.php(420): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\wwwc\tmp\blog\system\Database\BaseConnection.php(603): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\wwwc\tmp\blog\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\wwwc\tmp\blog\system\Model.php(318): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\wwwc\tmp\blog\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\wwwc\tmp\blog\app\Controllers\Home.php(21): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\wwwc\tmp\blog\system\CodeIgniter.php(933): App\Controllers\Home->LoginUser()
+#8 C:\xampp\htdocs\wwwc\tmp\blog\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\wwwc\tmp\blog\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\wwwc\tmp\blog\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\wwwc\tmp\blog\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\wwwc\tmp\blog\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\wwwc\tmp\blog\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\wwwc\tmp\blog\system\Database\BaseConnection.php(420): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\wwwc\tmp\blog\system\Database\BaseConnection.php(603): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\wwwc\tmp\blog\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\wwwc\tmp\blog\system\Model.php(318): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\wwwc\tmp\blog\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\wwwc\tmp\blog\app\Controllers\Home.php(21): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\wwwc\tmp\blog\system\CodeIgniter.php(933): App\Controllers\Home->LoginUser()
+#7 C:\xampp\htdocs\wwwc\tmp\blog\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\wwwc\tmp\blog\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\wwwc\tmp\blog\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\wwwc\tmp\blog\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\wwwc\tmp\blog\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2026-01-23 06:55:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 456.
+ 1 SYSTEMPATH\Database\BaseConnection.php(603): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `adminmaster`
+WHERE `Username` = :Username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(318): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Home.php(21): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->LoginUser()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-23 07:07:02 --> ErrorException: Undefined variable $count
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\index.php on line 23.
+ 1 APPPATH\Views\admin\index.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $count', 'C:\\xampp\\htdocs\\wwwc\\tmp\\blog\\app\\Views\\admin\\index.php', 23)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\wwwc\\tmp\\blog\\app\\Views\\admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(13): view('admin/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

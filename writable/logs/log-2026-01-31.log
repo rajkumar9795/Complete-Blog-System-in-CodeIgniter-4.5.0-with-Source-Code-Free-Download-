@@ -1,0 +1,46 @@
+CRITICAL - 2026-01-31 04:20:26 --> Error: Class "App\Controllers\BlogModel" not found
+[Method: GET, Route: blogindex]
+in APPPATH\Controllers\Admin.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->blogindex()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-31 04:20:52 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/blogindex.php"
+[Method: GET, Route: blogindex]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/blogindex.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/blogindex', [], true)
+ 3 APPPATH\Controllers\Admin.php(25): view('admin/blogindex', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->blogindex()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-31 04:21:22 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/shared/layout.php"
+[Method: GET, Route: blogindex]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/shared/layout.php')
+ 2 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('admin/shared/layout', [], true)
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('blogindex', [], true)
+ 4 APPPATH\Controllers\Admin.php(25): view('blogindex', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->blogindex()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-01-31 04:24:41 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/blogcreate.php"
+[Method: GET, Route: blogadd/30]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/blogcreate.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/blogcreate', [], true)
+ 3 APPPATH\Controllers\Admin.php(56): view('admin/blogcreate', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->blogadd('30')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
